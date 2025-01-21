@@ -48,7 +48,7 @@ export default function CartItems() {
                         <button disabled={cartItems.length === 0} class="disabled:opacity-65 text-sm px-4 py-3 bg-black text-white font-bold">
                             Checkout
                         </button>
-                        <button onClick={() => navigate("/explore")} class="text-sm px-4 py-3 bg-black text-white font-bold">
+                        <button onClick={() => navigate("/")} class="text-sm px-4 py-3 bg-black text-white font-bold">
                             Continue Shopping
                         </button>
                     </div>
