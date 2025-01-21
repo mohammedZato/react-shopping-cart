@@ -6,10 +6,12 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { shoppingContext } from "../Context";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
     const [item, setItem] = useState("");
     const { cartItems } = useContext(shoppingContext);
+    const navigate = useNavigate();
     
     return (
         <nav>
@@ -56,7 +58,7 @@ export default function Navbar() {
                         </span>
                         <strong>Sign in / <br /> Register</strong>
                     </div>
-                    <div class="flex items-center cursor-pointer relative">
+                    <div onClick={() => navigate("/cart")} class="flex items-center cursor-pointer relative">
                         <span>
                             <ion-icon class="size-8 mr-1" name="cart-outline"></ion-icon>
                         </span>
