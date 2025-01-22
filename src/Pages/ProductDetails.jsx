@@ -61,7 +61,7 @@ export default function ProductDetails() {
                                 onClick={() => handleAddToCart(productDetails)}
                             //Disable button if item already exists in cart items
                                 disabled={cartItems.findIndex(item => item.id === productDetails.id) > -1}
-                                class=" disabled:opacity-65 mt-5 min-w-[200px] px-4 mb-4 py-3 border border-[#333] bg-transparent text-sm font-semibold rounded hover:bg-gray-300 duration-400">
+                                class=" disabled:opacity-65 mt-5 min-w-[200px] px-4 mb-4 py-3 border border-[#333] bg-transparent text-sm font-semibold rounded hover:bg-gray-300">
                                     Add to cart
                             </button>
                         </div>
@@ -71,7 +71,7 @@ export default function ProductDetails() {
                             </h3>
                             <div class="text-yellow-400 mt-2 flex flex-row items-center space-x-1">
                                 <ion-icon name="star-half-outline"></ion-icon>
-                                <div class="text-black">
+                                <div>
                                     {productDetails.rating}
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ export default function ProductDetails() {
                         </div>
                         <div class="border-b pb-5 border-gray-300">
                             <h2 class="text-lg font-bold cursor-pointer mt-2 hover:text-slate-500">
-                                Service &#11166;
+                                Service
                             </h2>
                             <h3>
                                 Return Policy: {productDetails.returnPolicy}

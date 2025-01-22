@@ -11,7 +11,7 @@ export default function CartItems() {
     return(
         <div class="max-w-5xl mx-auto max-md:max-w-xl py-4 px-5">
             <div class="flex items-center justify-center">
-                <h1 class="text-2xl font-bold text-gray-800 text-center mr-auto mt-5">
+                <h1 class="text-2xl font-bold text-black text-center mr-auto mt-5">
                     My Cart Page
                 </h1>
                 <div class="text-slate-700 text-3xl text-right mx-10 mt-8 relative">

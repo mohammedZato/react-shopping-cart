@@ -15,12 +15,12 @@ export default function Navbar() {
     
     return (
         <nav>
-            <div class="flex items-center justify-center space-x-5">
+            <div class="mb-4 mt-1 mx-1 flex items-center justify-center space-x-5">
                 <div>
                     <img 
                         src={myLogo} 
                         alt="" 
-                        class="w-28"
+                        class="w-20"
                     />
                 </div>
                 <div class="relative">

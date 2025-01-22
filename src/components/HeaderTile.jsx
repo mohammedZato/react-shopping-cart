@@ -11,7 +11,7 @@ export default function HeaderTile() {
                         targetDate="2025-03-15T12:00:00"
                     />
                     <h2 class="font-bold text-4xl mb-6">WINTER <span class="text-red-800">SALE</span></h2>
-                    <div class="flex space-x-2">
+                    <div class="mx-3 flex space-x-2">
                         <div class="border border-red-800 p-2">
                             <div class="text-red-800 text-base font-bold">GHS441.01 OFF</div>
                             <div class="text-xs text-gray-500">orders <span class="text-sm">GHS3,513.4+</span></div>
