@@ -22,9 +22,9 @@ export default function ProductDetails() {
 
     return (
         <div>
-            <div onClick={() => navigate("/cart")} class="text-slate-700 text-3xl text-right mx-10 mt-8 relative">
+            <div onClick={() => navigate("/cart")} class="text-slate-700 text-3xl text-right mx-10 pt-8 relative">
                 <ion-icon class="cursor-pointer" name="cart-outline"></ion-icon>
-                <span class="absolute -right-0.5 top-[-5px] text-sm text-white bg-red-600 rounded-full px-1 border">
+                <span class="absolute -right-0.5 top-[24px] text-sm text-white bg-red-600 rounded-full px-1 border">
                     {cartItems.length}
                 </span>
             </div>
@@ -52,21 +52,21 @@ export default function ProductDetails() {
                         </div>
                     </div>
                     <div class="lg:w-80 border-b pb-5 border-gray-300">
-                        <h2 class="text-2xl font-medium text-[#3333333}">{productDetails.title}</h2>
+                        <h2 class="text-2xl font-medium text-black text-[#3333333}">{productDetails.title}</h2>
                         <div class="flex flex-wrap gap-4 mt-4">
-                            <p class="text-base font-bold">${productDetails.price}</p>
+                            <p class="text-base text-black font-bold">${productDetails.price}</p>
                         </div>
                         <div>
                             <button 
                                 onClick={() => handleAddToCart(productDetails)}
                             //Disable button if item already exists in cart items
                                 disabled={cartItems.findIndex(item => item.id === productDetails.id) > -1}
-                                class=" disabled:opacity-65 mt-5 min-w-[200px] px-4 mb-4 py-3 border border-[#333] bg-transparent text-sm font-semibold rounded hover:bg-gray-300">
+                                class=" disabled:opacity-65 mt-5 min-w-[200px] px-4 mb-4 py-3 border border-[#333] bg-transparent text-black text-sm font-semibold rounded hover:bg-gray-400">
                                     Add to cart
                             </button>
                         </div>
                         <div class="border-b pb-5 border-gray-300">
-                            <h3 class="text-md">
+                            <h3 class="text-md text-black">
                                 {productDetails.description}
                             </h3>
                             <div class="text-yellow-400 mt-2 flex flex-row items-center space-x-1">
@@ -77,24 +77,24 @@ export default function ProductDetails() {
                             </div>
                         </div>
                         <div class="border-b pb-5 border-gray-300">
-                            <h2 class="text-lg font-bold cursor-pointer mt-2 hover:text-slate-500">
+                            <h2 class="text-lg text-black font-bold cursor-pointer mt-2 hover:text-slate-500">
                                 Delivery &#11166;
                             </h2>
-                            <h3 class="text-md font-medium">
+                            <h3 class="text-md text-black font-medium">
                                 Shipping: $5.99
                             </h3>
-                            <h3 class="text-md font-medium">
+                            <h3 class="text-md text-black font-medium">
                                 MOQ: {productDetails.minimumOrderQuantity} 
                             </h3>
-                            <h3>
+                            <h3 class="text-black">
                                 Delivery: {productDetails.shippingInformation}
                             </h3>
                         </div>
                         <div class="border-b pb-5 border-gray-300">
-                            <h2 class="text-lg font-bold cursor-pointer mt-2 hover:text-slate-500">
+                            <h2 class="text-lg text-black font-bold cursor-pointer mt-2 hover:text-slate-500">
                                 Service
                             </h2>
-                            <h3>
+                            <h3 class="text-black">
                                 Return Policy: {productDetails.returnPolicy}
                             </h3>
                         </div>

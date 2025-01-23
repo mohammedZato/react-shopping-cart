@@ -15,7 +15,7 @@ export default function CartTile({...singleCartItem}) {
                     </div>
                     <div>
                         <h3 class="text-base font-bold text-gray-900">{singleCartItem.title}</h3>
-                        <button onClick={() => handleRemoveProduct(singleCartItem, true)} class="text-sm px-4 py-3 mt-4 bg-black text-white font-bold">REMOVE ITEM</button>
+                        <button onClick={() => handleRemoveProduct(singleCartItem, true)} class="text-sm px-2 py-3 mt-4 bg-black text-white font-bold">REMOVE ITEM</button>
                     </div>
                 </div>
                 <div class="ml-auto">
