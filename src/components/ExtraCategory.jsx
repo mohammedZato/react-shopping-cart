@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ExtraCategory() {
     return(
-        <div class="flex justify-center my-5">
+        <div class="flex justify-center my-5 mx-2">
             <ul class="grid grid-cols-3 gap-x-4 gap-y-1 md:grid-cols-5 lg:flex lg:justify-center lg:px-8">
                 <li class="text-gray-500 text-xs cursor-pointer">View More</li>
                 <li class="text-gray-500 text-xs cursor-pointer">ac recharge kit</li>
