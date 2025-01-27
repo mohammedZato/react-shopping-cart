@@ -66,8 +66,8 @@ export default function Navbar() {
                     </div>
                 </div>  
                 <div>
-                    <span class="text-4xl cursor-pointer lg:hidden">
-                        <ion-icon onclick="sidebar(e)" name="menu-outline"></ion-icon>
+                    <span class="text-4xl text-black cursor-pointer lg:hidden">
+                        <ion-icon class="text-black" name="menu-outline"></ion-icon>
                     </span>
                 </div>
             </div> 
