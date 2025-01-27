@@ -7,12 +7,22 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { shoppingContext } from "../Context";
 import { useNavigate } from "react-router-dom";
+import Sidebar from "./sidebar";
+import CategorySidebar from "./categorySidebar";
 
 export default function Navbar() {
     const [item, setItem] = useState("");
-    const { cartItems } = useContext(shoppingContext);
+    const { cartItems, sidebarToggle, setSidebarToggle, setCategoryToggle, categoryToggle, } = useContext(shoppingContext);
     const navigate = useNavigate();
-    
+
+    function handleSidebarToggle() {
+        setSidebarToggle(prevState => !prevState);
+    };
+
+    function handleCategoryToggle() {
+        setCategoryToggle(prevState => !prevState);
+    };
+
     return (
         <nav>
             <div class="mb-4 pt-1 mx-1 flex items-center justify-center space-x-5">
@@ -37,6 +47,7 @@ export default function Navbar() {
                         <ion-icon class="size-8 text-white" name="search-circle"></ion-icon>
                     </button>
                 </div>
+                <Sidebar />
                 <div class="hidden lg:flex lg:flex-row lg:space-x-7">
                     <div class="flex items-center cursor-pointer">
                         <span>
@@ -67,7 +78,7 @@ export default function Navbar() {
                 </div>  
                 <div>
                     <span class="text-4xl text-black cursor-pointer lg:hidden">
-                        <ion-icon class="text-black" name="menu-outline"></ion-icon>
+                        <ion-icon onClick={handleSidebarToggle} class="text-black" name="menu-outline"></ion-icon>
                     </span>
                 </div>
             </div> 
@@ -91,11 +102,12 @@ export default function Navbar() {
                     <li class="text-[17px] hidden md:block lg:text-[20px]">
                         <a class="text-black hover:text-black" href="">Home & Garden</a>
                     </li>
-                    <li class="text-[17px] lg:text-[20px]">
-                        <a class="text-black hover:text-black" href="">More</a>
-                    </li>
+                    <div onClick={handleCategoryToggle} class="text-[17px] lg:text-[20px] text-black font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        More
+                    </div>
                 </ul>
             </div>
+            <CategorySidebar />
         </nav>
     )
 }

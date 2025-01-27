@@ -47,16 +47,16 @@ export default function Footer() {
                         <h2 class="font-bold text-lg mb-2 text-black">Stay Connected With</h2>
                         <div>
                             <span>
-                                <ion-icon class="text-4xl cursor-pointer" name="logo-facebook"></ion-icon>
+                                <ion-icon class="text-4xl text-black cursor-pointer" name="logo-facebook"></ion-icon>
                             </span>
                             <span>
-                                <ion-icon class="text-4xl cursor-pointer" name="logo-twitter"></ion-icon>
+                                <ion-icon class="text-4xl text-black cursor-pointer" name="logo-twitter"></ion-icon>
                             </span>
                             <span>
-                                <ion-icon class="text-4xl cursor-pointer" name="logo-instagram"></ion-icon>
+                                <ion-icon class="text-4xl text-black cursor-pointer" name="logo-instagram"></ion-icon>
                             </span>
                             <span>
-                                <ion-icon class="text-4xl cursor-pointer" name="logo-whatsapp"></ion-icon>
+                                <ion-icon class="text-4xl text-black cursor-pointer" name="logo-whatsapp"></ion-icon>
                             </span>
                         </div>
                     </div>  

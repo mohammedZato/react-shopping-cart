@@ -8,6 +8,8 @@ function GlobalState({children}) {
     const [productDetails, setProductDetails] = useState([]);
     const [cartItems, setCartItems] = useState([]);
     const [categoryList, setCategoryList] = useState([]);
+    const [sidebarToggle, setSidebarToggle] = useState(false);
+    const [categoryToggle, setCategoryToggle] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
@@ -82,7 +84,27 @@ function GlobalState({children}) {
         setCartItems(cpyExistingCartItems);
     }
 
-    return <shoppingContext.Provider value={{ productList, setProductList, categoryList, setCategoryList, loading, setLoading, productDetails, setProductDetails, cartItems, setCartItems, handleAddToCart, handleRemoveProduct }}>{children}</shoppingContext.Provider>
+    return <shoppingContext.Provider 
+        value={{ 
+            productList, 
+            setProductList, 
+            categoryList, 
+            setCategoryList, 
+            loading, 
+            setLoading, 
+            productDetails, 
+            setProductDetails, 
+            cartItems, 
+            setCartItems, 
+            handleAddToCart, 
+            handleRemoveProduct, 
+            sidebarToggle, 
+            setSidebarToggle, 
+            categoryToggle,
+            setCategoryToggle,
+        }}>
+            {children}
+    </shoppingContext.Provider>
 }
 
 export default GlobalState;
