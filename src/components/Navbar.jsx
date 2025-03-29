@@ -9,10 +9,11 @@ import { shoppingContext } from "../Context";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./sidebar";
 import CategorySidebar from "./categorySidebar";
+import { Grid, Search, ShoppingCart, User, } from "lucide-react";
 
 export default function Navbar() {
     const [item, setItem] = useState("");
-    const { cartItems, sidebarToggle, setSidebarToggle, setCategoryToggle, categoryToggle, } = useContext(shoppingContext);
+    const { cartItems, setSidebarToggle, setCategoryToggle, } = useContext(shoppingContext);
     const navigate = useNavigate();
 
     function handleSidebarToggle() {
@@ -43,15 +44,15 @@ export default function Navbar() {
                         value={item}
                         onChange={(event) => setItem(event.target.value)}
                     />
-                    <button class="px-5 py-1 rounded-full bg-black absolute top-0 left-[181px]">
-                        <ion-icon class="size-8 text-white" name="search-circle"></ion-icon>
+                    <button class="px-5 py-1 rounded-full bg-black absolute top-0 bottom-0 left-[181px] hover:border-black">
+                        <Search className="size-8 text-white"/>
                     </button>
                 </div>
                 <Sidebar />
                 <div class="hidden lg:flex lg:flex-row lg:space-x-7">
                     <div class="flex items-center cursor-pointer">
                         <span>
-                            <ion-icon class="size-10 mr-1" name="barcode-outline"></ion-icon>
+                            <Grid className="size-7 mr-1"/>
                         </span>
                         <h3 class="text-sm">Download the <br /> AliExpress app</h3>
                     </div>
@@ -65,13 +66,13 @@ export default function Navbar() {
                     </div>
                     <div class="flex items-center cursor-pointer">
                         <span>
-                            <ion-icon class="size-8 mr-1" name="person-outline"></ion-icon>
+                            <User className="size-8 mr-1"/>
                         </span>
                         <strong>Sign in / <br /> Register</strong>
                     </div>
                     <div onClick={() => navigate("/cart")} class="flex items-center cursor-pointer relative">
-                        <span>
-                            <ion-icon class="size-8 mr-1" name="cart-outline"></ion-icon>
+                        <span class="text-black">
+                            <ShoppingCart className="size-8"/>
                         </span>
                         <div class="absolute top-0 right-[-10px] bg-red-500 border rounded-full px-2">{cartItems.length}</div>
                     </div>

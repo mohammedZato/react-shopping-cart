@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { shoppingContext } from "../Context";
 import { useNavigate, useParams } from "react-router-dom";
+import { ShoppingCart } from "lucide-react";
 
 export default function ProductDetails() {
     const { productDetails, setProductDetails, cartItems, handleAddToCart, } = useContext(shoppingContext);
@@ -21,10 +22,12 @@ export default function ProductDetails() {
     }, [id]);
 
     return (
-        <div>
+        <div className="font-poppins">
             <div onClick={() => navigate("/cart")} class="text-slate-700 text-3xl text-right mx-10 pt-8 relative">
-                <ion-icon class="cursor-pointer" name="cart-outline"></ion-icon>
-                <span class="absolute -right-0.5 top-[24px] text-sm text-white bg-red-600 rounded-full px-1 border">
+                <div className="absolute right-1">
+                    <ShoppingCart className="size-8"/>
+                </div>
+                <span class="absolute -right-0.5 top-[24px] text-sm text-white bg-red-600 rounded-full px-2 border">
                     {cartItems.length}
                 </span>
             </div>

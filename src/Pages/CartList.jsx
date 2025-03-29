@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { shoppingContext } from "../Context";
 import CartTile from "../components/CartTile";
 import { useNavigate } from "react-router-dom";
+import { ShoppingCart } from "lucide-react";
 
 export default function CartItems() {
     const { cartItems } = useContext(shoppingContext);
@@ -9,14 +10,16 @@ export default function CartItems() {
     const navigate = useNavigate();
 
     return(
-        <div class="max-w-5xl mx-auto max-md:max-w-xl py-4 px-5">
+        <div class="max-w-5xl mx-auto max-md:max-w-xl py-4 px-5 font-poppins">
             <div class="flex items-center justify-center">
                 <h1 class="text-2xl font-bold text-black text-center mr-auto mt-5">
                     My Cart Page
                 </h1>
                 <div class="text-slate-700 text-3xl text-right mx-10 mt-8 relative">
-                    <ion-icon class="cursor-pointer" name="cart-outline"></ion-icon>
-                    <span class="absolute -right-0.5 top-[-5px] text-sm text-white bg-red-600 rounded-full px-1 border">
+                    <div>
+                        <ShoppingCart className="size-8"/>
+                    </div>
+                    <span class="absolute right-[-6px] top-[-5px] text-sm text-white bg-red-600 rounded-full px-2 border">
                         {cartItems.length}
                     </span>
                 </div>

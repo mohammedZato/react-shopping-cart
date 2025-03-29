@@ -11,10 +11,10 @@ export default function ExplorePage() {
     const { productList, categoryList, cartItems } = useContext(shoppingContext);
 
     return (
-        <div>
+        <div className="font-poppins">
             <Navbar />
             <HeaderTile />
-            <h1 class="font-bold text-black font-mono text-center mt-9 tracking-tight">BEST DEALS OF THE MONTH</h1>
+            <h1 class="font-bold text-black font-poppins text-center mt-9 tracking-tight">BEST DEALS OF THE MONTH</h1>
             <main class="grid grid-cols-2 mx-3 gap-4 md:grid-cols-3 lg:mt-10 lg:gap-5 lg:grid-cols-4">
                 {
                     productList &&
@@ -26,7 +26,7 @@ export default function ExplorePage() {
                     })
                 } 
             </main>
-            <h2 class="text-black text-3xl font-bold font-mono text-center my-8">Shop By Category</h2>
+            <h2 class="text-black text-3xl font-bold font-poppins text-center my-8">Shop By Category</h2>
             <div class="grid grid-cols-2 mx-3 gap-4 md:grid-cols-3 lg:mt-10 lg:gap-5 lg:grid-cols-4">
                 {
                     categoryList &&

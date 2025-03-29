@@ -6,7 +6,7 @@ import CartItems from './Pages/CartList'
 
 function App() {
   return (
-    <Routes>
+      <Routes>
       <Route path="/" element={<ExplorePage />} />
       <Route path="/product-details/:id" element={<ProductDetails />} />
       <Route path="/cart" element={<CartItems />} />
