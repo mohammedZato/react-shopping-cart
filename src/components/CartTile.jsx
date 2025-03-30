@@ -26,7 +26,7 @@ export default function CartTile({...singleCartItem}) {
                     <div class="mt-3"> 
                         <button 
                             onClick={() => handleRemoveProduct(singleCartItem)}
-                            class=" disabled:opacity-65 border border-[#000]"
+                            class=" disabled:opacity-65 border border-[#000] mr-1"
                             disabled={singleCartItem.quantity === 1}
                             >
                             -

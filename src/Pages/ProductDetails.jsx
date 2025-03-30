@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { shoppingContext } from "../Context";
 import { useNavigate, useParams } from "react-router-dom";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, StarIcon } from "lucide-react";
 
 export default function ProductDetails() {
     const { productDetails, setProductDetails, cartItems, handleAddToCart, } = useContext(shoppingContext);
@@ -23,7 +23,7 @@ export default function ProductDetails() {
 
     return (
         <div className="font-poppins">
-            <div onClick={() => navigate("/cart")} class="text-slate-700 text-3xl text-right mx-10 pt-8 relative">
+            <div onClick={() => navigate("/cart")} class="text-slate-700 text-3xl text-right mx-10 pt-8 relative cursor-pointer">
                 <div className="absolute right-1">
                     <ShoppingCart className="size-8"/>
                 </div>
@@ -73,7 +73,7 @@ export default function ProductDetails() {
                                 {productDetails.description}
                             </h3>
                             <div class="text-yellow-400 mt-2 flex flex-row items-center space-x-1">
-                                <ion-icon name="star-half-outline"></ion-icon>
+                                <StarIcon />
                                 <div>
                                     {productDetails.rating}
                                 </div>
@@ -84,13 +84,13 @@ export default function ProductDetails() {
                                 Delivery &#11166;
                             </h2>
                             <h3 class="text-md text-black font-medium">
-                                Shipping: $5.99
+                                <strong>Shipping</strong>: $5.99
                             </h3>
                             <h3 class="text-md text-black font-medium">
-                                MOQ: {productDetails.minimumOrderQuantity} 
+                                <strong>MOQ</strong>: {productDetails.minimumOrderQuantity} 
                             </h3>
                             <h3 class="text-black">
-                                Delivery: {productDetails.shippingInformation}
+                                <strong>DeliveryDelivery</strong>: {productDetails.shippingInformation}
                             </h3>
                         </div>
                         <div class="border-b pb-5 border-gray-300">
