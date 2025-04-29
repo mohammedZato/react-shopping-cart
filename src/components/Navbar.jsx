@@ -52,9 +52,9 @@ export default function Navbar() {
                 <div class="hidden lg:flex lg:flex-row lg:space-x-7">
                     <div class="flex items-center cursor-pointer">
                         <span>
-                            <Grid className="size-7 mr-1"/>
+                            <Grid className="size-7 mr-1 text-black"/>
                         </span>
-                        <h3 class="text-sm">Download the <br /> AliExpress app</h3>
+                        <h3 class="text-sm text-black">Download the <br /> AliExpress app</h3>
                     </div>
                     <div class="flex items-center cursor-pointer">
                         <img 
@@ -62,19 +62,19 @@ export default function Navbar() {
                             alt="" 
                             class="w-6 mr-1"
                         />
-                        <h3 class="text-sm">EN/ <br /> <strong>GHS</strong></h3>
+                        <h3 class="text-sm text-black">EN/ <br /> <strong>GHS</strong></h3>
                     </div>
                     <div class="flex items-center cursor-pointer">
                         <span>
-                            <User className="size-8 mr-1"/>
+                            <User className="size-8 mr-1 text-black"/>
                         </span>
-                        <strong>Sign in / <br /> Register</strong>
+                        <strong className="text-black">Sign in / <br /> Register</strong>
                     </div>
                     <div onClick={() => navigate("/cart")} class="flex items-center cursor-pointer relative">
                         <span class="text-black">
                             <ShoppingCart className="size-8"/>
                         </span>
-                        <div class="absolute top-0 right-[-10px] bg-red-500 border rounded-full px-2">{cartItems.length}</div>
+                        <div class="absolute top-0 right-[-10px] text-black bg-red-500 border rounded-full px-2">{cartItems.length}</div>
                     </div>
                 </div>  
                 <div>
